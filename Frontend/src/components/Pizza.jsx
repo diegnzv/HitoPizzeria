@@ -26,11 +26,11 @@ const Pizza = () => {
   }, [])
 
   if (loading) {
-    return <div className="center-message loading">Cargando...</div>;
+    return <div className="center-message loading">Cargando...</div>
   }
   
   if (error) {
-    return <div className="center-message error">Error: {error}</div>;
+    return <div className="center-message error">Error: {error}</div>
   }
 
   return (
@@ -46,7 +46,7 @@ const Pizza = () => {
         </>
       )}
     </div>
-  );
-};
+  )
+}
 
 export default Pizza
