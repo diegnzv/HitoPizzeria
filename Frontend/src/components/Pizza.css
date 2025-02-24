@@ -1,0 +1,86 @@
+.pizza-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .pizza-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .pizza-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  .pizza-container p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #fff;
+  }
+  
+  .pizza-container p strong {
+    color: #555;
+  }
+  
+  .pizza-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pizza-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pizza-container button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+
+  .center-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.5rem;
+  }
+  
+  .center-message.error {
+    color: red;
+  }
+  
+  .center-message.loading {
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .pizza-container h1 {
+      font-size: 1.5rem;
+    }
+  
+    .pizza-container p {
+      font-size: 1rem;
+    }
+  
+    .pizza-container button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
