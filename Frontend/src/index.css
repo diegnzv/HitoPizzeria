@@ -30,6 +30,7 @@ body, html {
   min-height: 100vh;
   overflow-x:hidden;
   font-size:small;
+  background-color: lightgray;
 }
 .app{
   max-width: 100vw;

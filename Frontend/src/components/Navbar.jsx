@@ -1,31 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
-import { formatNumber } from '../assets/utils/formatNumber'
 
 const Navbar = () => {
-    const total = 25000;
-    const token = false;
-
-    return (
-        <div className="navbar-container">
-            <p>Pizzería Mamma Mía!</p>
-            <div className="buttons-container">
-                <button type="button" className="btn"><i className="fas fa-pizza-slice"></i>Home</button>
-                {token ? (
-                    <>
-                        <button type="button" className="btn"><i className="fas fa-lock-open"></i>Profile</button>
-                        <button type="button" className="btn"><i className="fas fa-lock"></i>Logout</button>
-                    </>
-                ) : (
-                    <>
-                        <button type="button" className="btn"><i className="fas fa-lock"></i><i className="fas fa-key"></i>Login</button>
-                        <button type="button" className="btn"><i className="fas fa-lock"></i><i className="fas fa-key"></i>Register</button>
-                    </>
-                )}
-                <button type="button" className="btn total-btn"><i className="fas fa-shopping-cart"></i>Total: ${formatNumber(total)}</button>
-            </div>
-        </div>
-    )
+  return (
+    <nav className="navbar">
+      <Link to="/" className="navbar-logo">
+        Pizzería
+      </Link>
+      <div className="navbar-links">
+        <Link to="/register">Registro</Link>
+        <Link to="/login">Iniciar sesión</Link>
+        <Link to="/profile">Perfil</Link>
+      </div>
+      <div className="navbar-cart">
+        <Link to="/cart"><span>🛒 Total: $0</span></Link>
+      </div>
+    </nav>
+  )
 }
 
 export default Navbar

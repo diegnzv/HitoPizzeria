@@ -1,5 +1,5 @@
 import React from 'react'
-import './RegisterPage.css'
+import '../components/RegisterPage.css'
 import { useState } from 'react'
 
 
